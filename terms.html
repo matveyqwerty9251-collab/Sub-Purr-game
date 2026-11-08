@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="ru" data-lang="ru" data-t-ru="Пользовательское соглашение — PurrGame" data-t-en="Terms of Service — PurrGame">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="dark light">
+<title>Пользовательское соглашение — PurrGame</title>
+<style>
+/* Тема подхватывается автоматически из настроек устройства (тёмная / светлая) */
+  :root { --bg:#121418; --card:#1e2229; --card2:#262b34; --line:#343a45; --text:#eef0f4; --muted:#9099a8; --acc:#f0f2f6; --hdr:rgba(18,20,24,.92); --doc:#cfd3db; --strong:#c9ced8; }
+  @media (prefers-color-scheme: light) {
+    :root { --bg:#eef0f4; --card:#ffffff; --card2:#f7f8fb; --line:#d3d8e0; --text:#1c1f26; --muted:#6b7280; --acc:#1c1f26; --hdr:rgba(238,240,244,.92); --doc:#3a3f4a; --strong:#1c1f26; }
+  }
+  * { box-sizing:border-box; margin:0; padding:0; -webkit-tap-highlight-color:transparent; }
+  html { scroll-behavior:smooth; scroll-padding-top:70px; background:var(--bg); }
+  body { background:var(--bg); color:var(--text); font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif; line-height:1.5; overflow-x:hidden; }
+  a { color:inherit; }
+  .en { display:none; }
+  html[data-lang="en"] .en { display:inline; }
+  html[data-lang="en"] .ru { display:none; }
+  .wrap { width:100%; max-width:760px; margin:0 auto; padding:0 20px; }
+
+  header { position:sticky; top:0; z-index:10; background:var(--hdr); backdrop-filter:blur(8px); border-bottom:1px solid var(--line); }
+  header .wrap { display:flex; align-items:center; justify-content:space-between; gap:12px; height:56px; }
+  .logo { font-weight:800; font-size:20px; text-decoration:none; }
+  nav { display:flex; align-items:center; gap:16px; font-size:14px; color:var(--muted); }
+  nav a { text-decoration:none; } nav a:hover { color:var(--text); }
+  .lang { padding:6px 10px; font:700 13px inherit; color:var(--text); background:none; border:1px solid var(--line); border-radius:10px; cursor:pointer; }
+
+  .sq { border-radius:30px; }
+  @supports (corner-shape:squircle) { .sq { corner-shape:squircle; border-radius:48px; } }
+
+  .hero { text-align:center; padding:56px 0 28px; }
+  .hero h1 { font-size:clamp(32px,8vw,48px); line-height:1.1; font-weight:800; }
+  .hero p { max-width:480px; margin:14px auto 24px; color:var(--muted); font-size:17px; }
+  .btn { display:inline-block; padding:15px 28px; font:700 17px/1 inherit; text-align:center; text-decoration:none; color:var(--bg); background:var(--acc); border:0; cursor:pointer; }
+  .btn:active { opacity:.8; }
+  h2 { font-size:28px; font-weight:800; text-align:center; padding:48px 0 8px; }
+  .sub { text-align:center; color:var(--muted); max-width:460px; margin:0 auto 26px; }
+
+  .feat { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:12px; }
+  .feat div { background:var(--card); border:1px solid var(--line); padding:18px; text-align:center; font-weight:600; font-size:15px; }
+  .feat i { display:block; font-style:normal; font-size:30px; margin-bottom:6px; }
+
+  .plans { display:grid; grid-template-columns:repeat(auto-fit,minmax(0,340px)); justify-content:center; gap:22px 18px; padding-top:12px; }
+  .plan { position:relative; width:100%; background:var(--card); border:1px solid var(--line); padding:34px 24px 24px; display:flex; flex-direction:column; text-align:center; }
+  .plan.best { border-color:var(--strong); background:var(--card2); }
+  .badge { position:absolute; top:-13px; left:50%; transform:translateX(-50%); white-space:nowrap; padding:6px 14px; font-size:13px; font-weight:700; color:var(--bg); background:var(--acc); border-radius:20px; }
+  .plan h3 { font-size:19px; font-weight:700; color:var(--muted); }
+  .price { font-size:46px; font-weight:800; line-height:1.15; padding-top:6px; }
+  .price small { font-size:22px; font-weight:700; }
+  .note { margin:6px 0 18px; min-height:42px; font-size:14px; color:var(--muted); }
+  .auto { margin-top:-8px; margin-bottom:14px; font-size:12px; opacity:.5; }
+  .plan .btn { margin-top:auto; width:100%; }
+  .agree { text-align:center; font-size:13px; color:var(--muted); margin-top:20px; }
+
+  #mysub { display:none; max-width:340px; margin:30px auto 0; background:var(--card2); border:1px solid var(--strong); padding:24px; text-align:center; }
+  #mysub.on { display:block; }
+  #mysub h3 { font-size:20px; } #mysub p { color:var(--muted); font-size:14px; margin-top:6px; }
+  .link { margin-top:16px; padding:12px 18px; font:600 15px inherit; color:var(--text); background:none; border:1px solid var(--line); border-radius:16px; cursor:pointer; }
+  .ask { display:none; margin-top:16px; } .ask.on { display:block; }
+  .ask b { display:block; font-size:18px; margin-bottom:12px; }
+  .ask .row { display:flex; gap:10px; justify-content:center; }
+  .ask button { flex:1; max-width:120px; padding:12px; font:700 16px inherit; border-radius:16px; border:1px solid var(--line); cursor:pointer; }
+  .yes { background:var(--acc); color:var(--bg); } .no { background:var(--card); color:var(--text); }
+  .done { display:none; margin-top:16px; } .done.on { display:block; }
+  .done b { display:block; font-size:16px; }
+
+  .contacts { max-width:460px; margin:0 auto; background:var(--card); border:1px solid var(--line); padding:24px; text-align:center; }
+  .contacts p { margin:6px 0; }
+  .contacts a, .doc a { text-decoration:underline; text-underline-offset:3px; }
+  .doc { max-width:660px; margin:0 auto; font-size:15px; color:var(--doc); }
+  .doc h4 { font-size:16px; color:var(--text); margin:20px 0 6px; }
+  .doc p { margin:6px 0; }
+  .doc .date { text-align:center; color:var(--muted); font-size:14px; margin-bottom:10px; }
+  footer { margin-top:64px; padding:28px 0 40px; border-top:1px solid var(--line); text-align:center; color:var(--muted); font-size:14px; }
+  footer nav { justify-content:center; flex-wrap:wrap; margin-bottom:10px; }
+  @media (max-width:520px) { header nav .opt { display:none; } nav { gap:12px; font-size:13px; } }
+
+  /* ===== тарифы в виде строк с галочками (новый вид) ===== */
+  .plan { display:block; text-align:left; padding:28px 22px 22px; }
+  .plan .head { display:flex; justify-content:space-between; align-items:flex-start; gap:12px; }
+  .plan h3 { font-size:20px; font-weight:800; color:var(--text); padding-top:6px; }
+  .pr { text-align:right; }
+  .old { font-size:15px; color:var(--muted); text-decoration:line-through; min-height:20px; }
+  .price { font-size:38px; padding-top:0; white-space:nowrap; }
+  .off { display:inline-block; margin-top:2px; padding:1px 9px; font-size:13px; font-weight:800; color:var(--bg); background:var(--acc); border-radius:10px; }
+  .ticks { list-style:none; display:grid; gap:9px; margin:18px 0 20px; font-size:15px; }
+  .ticks li::before { content:"✓"; margin-right:10px; font-weight:800; }
+  .badge { left:22px; transform:none; }
+  .plan .auto { margin:-6px 0 14px; }
+  .plan .btn { margin-top:0; }
+
+  /* ===== страница подписки, документы, соцсети ===== */
+  .page { padding:32px 0 8px; }
+  .back { display:inline-block; margin:22px 0 0; color:var(--muted); text-decoration:none; font-size:15px; }
+  .nosub { display:none; text-align:center; max-width:340px; margin:30px auto 0; padding:24px; background:var(--card); border:1px solid var(--line); }
+  .nosub.on { display:block; }
+  .nosub p { color:var(--muted); margin-bottom:16px; }
+  .social { display:flex; justify-content:center; gap:14px; margin-top:22px; }
+  .social a { width:46px; height:46px; display:flex; align-items:center; justify-content:center; color:var(--text); background:var(--card); border:1px solid var(--line); border-radius:16px; }
+  .social a:active { opacity:.7; }
+  .social svg { width:22px; height:22px; fill:currentColor; }
+
+</style>
+<script>
+/* PurrGame — общий скрипт */
+/* Язык по устройству (ru/be/kk → русский, иначе английский); кнопка RU/EN запоминает выбор */
+(function () {
+  var l = null, h = document.documentElement;
+  try { l = localStorage.getItem("pg_site_lang"); } catch (e) {}
+  if (l !== "ru" && l !== "en") {
+    var n = (navigator.languages && navigator.languages[0]) || navigator.language || "ru";
+    l = /^(ru|be|kk)/i.test(n) ? "ru" : "en";
+  }
+  h.setAttribute("data-lang", l); h.lang = l;
+  document.title = h.getAttribute("data-t-" + l) || document.title;
+})();
+
+/* Ссылки на оплату Platega — вставьте свои между кавычками. Пока пусто, кнопка работает в демо-режиме. */
+var PAY = { trial: "", m1: "", m3: "", m6: "" };
+var NAMES = {
+  trial: ["Пробный период · 3 дня", "Trial period · 3 days"], m1: ["1 месяц", "1 month"],
+  m3: ["3 месяца", "3 months"], m6: ["6 месяцев", "6 months"]
+};
+function ls(k, v) {
+  try { if (v === undefined) return localStorage.getItem(k); if (v === null) localStorage.removeItem(k); else localStorage.setItem(k, v); } catch (e) {}
+  return null;
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  var h = document.documentElement;
+  var lb = document.getElementById("lang");
+  if (lb) lb.addEventListener("click", function () {
+    var en = h.getAttribute("data-lang") !== "en", l = en ? "en" : "ru";
+    h.setAttribute("data-lang", l); h.lang = l;
+    document.title = h.getAttribute("data-t-" + l) || document.title;
+    try { localStorage.setItem("pg_site_lang", l); } catch (e) {}
+  });
+
+  var box = document.getElementById("mysub");
+  if (!box) return;                                   /* дальше — только главная страница */
+  var nameEl = document.getElementById("subname"), ask = document.getElementById("ask"),
+      done = document.getElementById("done"), cancelBtn = document.getElementById("cancelBtn");
+
+  function show() {
+    var plan = ls("pg_plan"), canceled = ls("pg_cancel") === "1";
+    if (!plan || !NAMES[plan]) { box.classList.remove("on"); return; }
+    box.classList.add("on");
+    nameEl.innerHTML = '<span class="ru">Тариф: ' + NAMES[plan][0] + '</span><span class="en">Plan: ' + NAMES[plan][1] + '</span>';
+    cancelBtn.style.display = canceled ? "none" : "";
+    ask.classList.remove("on"); done.classList.toggle("on", canceled);
+  }
+
+  document.querySelectorAll(".buy").forEach(function (a) {
+    var key = a.getAttribute("data-plan"), url = PAY[key];
+    a.href = url || "#mysub";
+    a.addEventListener("click", function (e) {
+      ls("pg_plan", key); ls("pg_cancel", null);
+      if (!url) { e.preventDefault(); show(); box.scrollIntoView({ behavior: "smooth", block: "center" }); }   /* демо */
+    });
+  });
+
+  cancelBtn.addEventListener("click", function () { ask.classList.add("on"); cancelBtn.style.display = "none"; });
+  document.getElementById("no").addEventListener("click", function () { ask.classList.remove("on"); cancelBtn.style.display = ""; });
+  document.getElementById("yes").addEventListener("click", function () { ls("pg_cancel", "1"); show(); });
+  show();
+});
+
+</script>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <a class="logo" href="index.html">PurrGame</a>
+    <nav>
+      <a class="opt" href="index.html#plans"><span class="ru">Тарифы</span><span class="en">Plans</span></a>
+      <a class="opt" href="index.html#support"><span class="ru">Поддержка</span><span class="en">Support</span></a>
+      <a href="privacy.html"><span class="ru">Политика</span><span class="en">Privacy</span></a>
+      <a href="terms.html"><span class="ru">Соглашение</span><span class="en">Terms</span></a>
+      <button class="lang" id="lang" type="button"><span class="ru">EN</span><span class="en">RU</span></button>
+    </nav>
+  </div>
+</header>
+<main><div class="wrap"><a class="back" href="index.html"><span class="ru">← На главную</span><span class="en">← Back to home</span></a></div><section class="wrap doc" id="terms">
+    <h2><span class="ru">Пользовательское соглашение</span><span class="en">Terms of Service</span></h2>
+    <p class="date"><span class="ru">Редакция от 8 ноября 2026 г.</span><span class="en">Version of November 8, 2026</span></p>
+    <h4><span class="ru">1. Общие положения</span><span class="en">1. General</span></h4>
+    <p><span class="ru">1.1. Соглашение регулирует использование сайта и приложения PurrGame (далее — «Сервис»), предоставляемого Администрацией проекта PurrGame (далее — «Администрация»).</span><span class="en">1.1. These Terms govern the use of the PurrGame website and app (the “Service”) provided by the PurrGame project administration (the “Administration”).</span></p>
+    <p><span class="ru">1.2. Используя Сервис, включая оплату подписки, Пользователь подтверждает, что ознакомился с Соглашением и принимает его в полном объёме. При несогласии он обязан прекратить использование Сервиса.</span><span class="en">1.2. By using the Service, including paying for a subscription, the User confirms they have read and fully accept these Terms. If they disagree, they must stop using the Service.</span></p>
+    <h4><span class="ru">2. Услуги и тарифы</span><span class="en">2. Services and prices</span></h4>
+    <p><span class="ru">2.1. Сервис предоставляет цифровые услуги нематериального характера: платный доступ к функциям приложения (рулетки, монетка, генератор чисел, подбор игры, математический тест).</span><span class="en">2.1. The Service provides intangible digital services: paid access to app features (roulettes, coin flip, number generator, game picker, math test).</span></p>
+    <p><span class="ru">2.2. Действующие тарифы: пробный период, 3 дня — 15 ₽; 1 месяц — 99 ₽ (первый месяц со скидкой, далее 159 ₽ в месяц); 3 месяца — 399 ₽; 6 месяцев — 699 ₽. Цена и срок указываются на странице тарифов до оплаты.</span><span class="en">2.2. Current prices: trial period, 3 days — 15 ₽; 1 month — 99 ₽ (first month at a discount, then 159 ₽ per month); 3 months — 399 ₽; 6 months — 699 ₽. Price and term are shown on the plans page before payment.</span></p>
+    <h4><span class="ru">3. Автопродление и отмена</span><span class="en">3. Auto-renewal and cancellation</span></h4>
+    <p><span class="ru">3.1. Пробный период продлевается автоматически: после его окончания подписка продлевается на месяц по цене 159 ₽.</span><span class="en">3.1. The trial period renews automatically: after it ends, the subscription renews for one month at 159 ₽.</span></p>
+    <p><span class="ru">3.2. Пользователь может отменить подписку в любой момент кнопкой «Отменить подписку» на сайте или через поддержку. Отмена вступает в силу в течение 15 минут; подписка действует до окончания оплаченного периода, последующие списания прекращаются.</span><span class="en">3.2. The User may cancel at any time with the “Cancel subscription” button on the site or via support. Cancellation takes effect within 15 minutes; the subscription stays active until the end of the paid period and no further charges are made.</span></p>
+    <h4><span class="ru">4. Отказ от гарантий</span><span class="en">4. Disclaimer</span></h4>
+    <p><span class="ru">4.1. Сервис предоставляется «как есть». Администрация не гарантирует бесперебойную и безошибочную работу и не отвечает за косвенные убытки, временные сбои и действия третьих лиц. Результаты рулеток, монеты и генераторов случайны и носят развлекательный характер.</span><span class="en">4.1. The Service is provided “as is”. The Administration does not guarantee uninterrupted or error-free operation and is not liable for indirect losses, temporary outages or actions of third parties. Results of roulettes, coin flips and generators are random and for entertainment only.</span></p>
+    <h4><span class="ru">5. Законность и интеллектуальная собственность</span><span class="en">5. Lawful use and intellectual property</span></h4>
+    <p><span class="ru">5.1. Пользователь использует Сервис только в рамках закона. Материалы Сервиса охраняются законом; копировать, перепродавать и передавать их третьим лицам без разрешения запрещено.</span><span class="en">5.1. The User uses the Service only within the law. Service materials are protected by law; copying, reselling or passing them to third parties without permission is prohibited.</span></p>
+    <h4><span class="ru">6. Ограничение доступа</span><span class="en">6. Restricting access</span></h4>
+    <p><span class="ru">6.1. Администрация вправе ограничить доступ при нарушении Соглашения, злоупотреблениях, а также по требованию закона или платёжных провайдеров.</span><span class="en">6.1. The Administration may restrict access in case of violations of these Terms, abuse, or when required by law or payment providers.</span></p>
+    <h4><span class="ru">7. Платежи и возвраты</span><span class="en">7. Payments and refunds</span></h4>
+    <p><span class="ru">7.1. Оплата производится на условиях, указанных на сайте до оплаты, через платёжный сервис Platega.</span><span class="en">7.1. Payment is made on the terms shown on the site before payment, via the payment service Platega.</span></p>
+    <p><span class="ru">7.2. Из-за нематериального характера услуг возврат после предоставления доступа не осуществляется, кроме случаев, когда услуга не оказана по технической вине Сервиса или доступ фактически не предоставлен. Для рассмотрения возврата нужно обратиться в поддержку в течение 24 часов с момента оплаты; решение принимается индивидуально.</span><span class="en">7.2. Because the services are intangible, no refund is made after access has been provided, except when the service was not delivered due to a technical fault of the Service or access was not actually granted. To request a refund, contact support within 24 hours of payment; each case is decided individually.</span></p>
+    <p><span class="ru">7.3. Пользователь обязуется не инициировать возврат платежа (chargeback) без предварительного обращения в поддержку.</span><span class="en">7.3. The User agrees not to initiate a chargeback without first contacting support.</span></p>
+    <h4><span class="ru">8. Изменение условий</span><span class="en">8. Changes</span></h4>
+    <p><span class="ru">8.1. Актуальная версия Соглашения публикуется на этой странице; продолжение использования Сервиса означает согласие с ней.</span><span class="en">8.1. The current version is published on this page; continued use of the Service means acceptance.</span></p>
+    <h4><span class="ru">9. Контакты</span><span class="en">9. Contacts</span></h4>
+    <p><span class="ru">9.1. Все вопросы — в поддержку:</span><span class="en">9.1. All questions — to support:</span> <a href="mailto:purrsustemsupport@gmail.com">purrsustemsupport@gmail.com</a>, Telegram <a href="https://t.me/Purr_System">@Purr_System</a>.</p>
+  </section></main>
+<footer>
+  <div class="wrap">
+    <nav>
+      <a href="index.html#plans"><span class="ru">Тарифы</span><span class="en">Plans</span></a>
+      <a href="index.html#mysub"><span class="ru">Моя подписка</span><span class="en">My subscription</span></a>
+      <a href="privacy.html"><span class="ru">Политика конфиденциальности</span><span class="en">Privacy Policy</span></a>
+      <a href="terms.html"><span class="ru">Пользовательское соглашение</span><span class="en">Terms of Service</span></a>
+    </nav>
+    <p><span class="ru">© 2026 PurrGame. Оплата принимается через Platega.</span><span class="en">© 2026 PurrGame. Payments are processed by Platega.</span></p>
+    <div class="social">
+      <a href="https://t.me/PurrSystem" target="_blank" rel="noopener" aria-label="Telegram"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg></a>
+      <a href="https://www.tiktok.com/@purrsustem" target="_blank" rel="noopener" aria-label="TikTok"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg></a>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
